@@ -8,12 +8,12 @@ const root = ReactDOM.createRoot(document.querySelector('#root'))
 root.render(
     <Canvas
         camera={ {
-            fov: 45,
-            near: 0.1,
+            fov: 35,
+            near: 0.5,
             far: 2000,
-            position: [ -3, 1.5, 4 ]
+            position: [ -3.9, 1.5, 5 ]
         } }
     >
-        <Experience />
+    <Experience />
     </Canvas>
 )
