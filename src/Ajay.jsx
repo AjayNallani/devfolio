@@ -1,4 +1,5 @@
-import { Float, Text, useGLTF, useFBX, useAnimations } from '@react-three/drei'
+import { Text, useGLTF, useFBX, useAnimations } from '@react-three/drei'
+import { CuboidCollider, RigidBody } from '@react-three/rapier'
 import { useEffect, useRef } from 'react'
 
 export default function Ajay()
@@ -17,8 +18,10 @@ export default function Ajay()
 
     return <>
         <group ref={group}>
-        <primitive object={ ajay.scene }  
-        />
+            <RigidBody type="kinematicPosition">
+                <primitive object={ ajay.scene }  
+                />
+            </RigidBody>
         </group>
     </>
 }
