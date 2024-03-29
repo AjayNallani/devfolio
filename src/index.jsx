@@ -36,7 +36,7 @@ root.render(
                 position: [ -3.9, 1.5, 5 ]
             } }
         >
-        <Experience /> <Stars />
+        <Stars /> <Experience /> 
         </Canvas>
     </KeyboardControls>
 )

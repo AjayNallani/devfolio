@@ -1,11 +1,13 @@
-import {Center, Text, ContactShadows, PresentationControls, Environment} from '@react-three/drei'
+import {Center, Text, ContactShadows, PresentationControls, Environment, Float} from '@react-three/drei'
 import { Physics } from '@react-three/rapier'
 import Ajay from './Ajay.jsx'
+import James from './James.jsx'
+import Asteroid from './Asteroid.jsx'
 
 export default function Experience()
 {
     return <>
-        <Environment preset='city' />
+        <Environment files="https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/1k/potsdamer_platz_1k.hdr"/>
 
         <color args={ [ '#2f2f2f' ] } attach="background" />
         
@@ -13,8 +15,8 @@ export default function Experience()
         <PresentationControls 
             global
             rotation={ [ -0.25, -0.60, -0.15 ] }
-            polar={ [ - 0.4, 0.2 ] }
-            azimuth={ [ - 1, 0.75 ] }
+            polar={ [ - 0.2, 0.2 ] }
+            azimuth={ [ - 0, 0.0 ] }
             config={ { mass: 50, tension: 200 } }
             snap={ { mass: 4, tension: 400 } }
         >
@@ -23,10 +25,15 @@ export default function Experience()
             </Center>
             
         </PresentationControls>
-
+        <Float>
+            <James />
+            <Asteroid />
+        </Float>
         <ContactShadows position-y={ - 1.9 } />
-
-        
+{/* 
+        <Suspense fallback={null}>
+            <About />
+        </Suspense> */}
 
         <Text
             font="Bulgatti-xgMV.ttf"

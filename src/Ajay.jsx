@@ -15,11 +15,12 @@ export default function Ajay()
     useEffect(() => {
         actions["Waving"].reset().play()
     }, [])
-
+ 
     return <>
         <group ref={group}>
             <RigidBody type="kinematicPosition">
-                <primitive object={ ajay.scene }  
+                <primitive
+                    object={ ajay.scene }  
                 />
             </RigidBody>
         </group>
